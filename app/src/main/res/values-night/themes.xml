@@ -19,7 +19,7 @@
         <item name="android:color">@color/black</item>
     </style>
 
-    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_bg</item>
-    </style>
+<!--    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+<!--        <item name="android:windowBackground">@drawable/splash_bg</item>-->
+<!--    </style>-->
 </resources>
