@@ -2,22 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zennymorh.payoneertask">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:name=".di.MyApplication"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:allowBackup="true"
+        android:icon="@drawable/payoneer_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/payoneer_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.PayoneerTask">
-        <activity android:name=".MainActivity">
+        <activity
+            android:exported="true"
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MainActivity"
+            android:exported="true">
         </activity>
     </application>
 

@@ -1,11 +1,11 @@
-package com.zennymorh.payoneertask;
+package com.zennymorh.payoneertask.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.zennymorh.payoneertask.R;
 import dagger.hilt.android.AndroidEntryPoint;
-import dagger.hilt.android.HiltAndroidApp;
 
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
