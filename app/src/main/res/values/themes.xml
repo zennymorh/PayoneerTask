@@ -21,7 +21,7 @@
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/payoneer_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_payoneer</item>
         <item name="postSplashScreenTheme">@style/Theme.PayoneerTask</item>
     </style>
 </resources>
