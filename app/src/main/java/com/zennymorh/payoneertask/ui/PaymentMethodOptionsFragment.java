@@ -29,6 +29,7 @@ public class PaymentMethodOptionsFragment extends Fragment implements PaymentMet
 
     private FragmentPaymentMethodOptionsBinding binding;
     private PaymentMethodAdapter paymentMethodAdapter;
+    PaymentMethodViewModel paymentMethodViewModel;
 
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
@@ -41,7 +42,7 @@ public class PaymentMethodOptionsFragment extends Fragment implements PaymentMet
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        PaymentMethodViewModel paymentMethodViewModel = new ViewModelProvider(this).get(PaymentMethodViewModel.class);
+        paymentMethodViewModel = new ViewModelProvider(this).get(PaymentMethodViewModel.class);
 
         paymentMethodAdapter = new PaymentMethodAdapter();
         paymentMethodAdapter.setPaymentMethodSelectionListener(this);
@@ -64,7 +65,7 @@ public class PaymentMethodOptionsFragment extends Fragment implements PaymentMet
             }else if(state.status == Status.NOT_FOUND){
                 displayError(getString(R.string.no_resources_found));
             }else if(state.status == Status.UNKNOWN_CODE){
-                displayError("Sorry, unknown error occurred!");
+                displayError(getString(R.string.unknown_error_occurred));
             }
         });
     }
@@ -79,15 +80,13 @@ public class PaymentMethodOptionsFragment extends Fragment implements PaymentMet
     private void displayError(String error) {
         binding.progressBar.setVisibility(View.GONE);
         binding.paymentMtdRecycler.setVisibility(View.GONE);
-        Toast.makeText(getContext(), "An error occurred", Toast.LENGTH_SHORT).show();
 
         Snackbar snackbar = Snackbar
-                .make(requireView(), "An error occurred", Snackbar.LENGTH_LONG)
+                .make(requireView(), error, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Retry", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Snackbar snackbar1 = Snackbar.make(requireView(), "Works great!", Snackbar.LENGTH_SHORT);
-                        snackbar1.show();
+                        getPaymentNetworks(paymentMethodViewModel);
                     }
                 });
 
