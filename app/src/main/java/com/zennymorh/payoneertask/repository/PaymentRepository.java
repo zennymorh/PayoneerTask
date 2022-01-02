@@ -19,11 +19,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PaymentRepository {
+public class PaymentRepository implements IPaymentRepository {
 
-    @Inject
     ApiService apiService;
 
+    @Inject
     public PaymentRepository(ApiService apiService) {
         this.apiService = apiService;
     }
