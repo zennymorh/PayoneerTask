@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/standard_margin"
-    android:layout_marginEnd="@dimen/standard_margin"
-    android:layout_marginTop="@dimen/item_margin"
-    android:layout_marginBottom="@dimen/item_margin">
+    android:layout_marginVertical="2dp">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/standard_margin"
+        android:layout_marginVertical="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        app:cardCornerRadius="4dp">
+        app:strokeColor="@color/grey"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/method_name"
@@ -39,14 +39,15 @@
 
             <ImageView
                 android:id="@+id/method_logo"
-                android:layout_width="@dimen/custom_placeholder_size"
-                android:layout_height="@dimen/custom_placeholder_size"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_margin="@dimen/standard_margin"
                 android:src="@drawable/loading"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/logo_for_payment_method" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/paymentMethodOptionsFragment"
-        android:name="com.zennymorh.payoneertask.ui.PaymentMethodOptionsFragment"
+        android:name="com.zennymorh.payoneertask.ui.paymentmethod.PaymentMethodOptionsFragment"
         android:label="fragment_payment_method_options"
         tools:layout="@layout/fragment_payment_method_options" />
 </navigation>

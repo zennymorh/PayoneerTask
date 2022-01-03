@@ -1,4 +1,4 @@
-package com.zennymorh.payoneertask.ui;
+package com.zennymorh.payoneertask.ui.paymentmethod;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,9 +40,7 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
                     .load(applicable.getLinks().getLogo())
                     .into(holder.methodLogo);
 
-            holder.itemView.setOnClickListener(view -> {
-                paymentMethodSelectionListener.onPaymentMethodSelected(applicable);
-            });
+            holder.itemView.setOnClickListener(view -> paymentMethodSelectionListener.onPaymentMethodSelected(applicable));
         }
     }
 

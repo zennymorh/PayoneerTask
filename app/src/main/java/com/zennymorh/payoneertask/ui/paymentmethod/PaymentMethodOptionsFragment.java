@@ -1,4 +1,4 @@
-package com.zennymorh.payoneertask.ui;
+package com.zennymorh.payoneertask.ui.paymentmethod;
 
 import android.os.Bundle;
 
@@ -83,12 +83,7 @@ public class PaymentMethodOptionsFragment extends Fragment implements PaymentMet
 
         Snackbar snackbar = Snackbar
                 .make(requireView(), error, Snackbar.LENGTH_INDEFINITE)
-                .setAction("Retry", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        getPaymentNetworks(paymentMethodViewModel);
-                    }
-                });
+                .setAction("Retry", view -> getPaymentNetworks(paymentMethodViewModel));
 
         snackbar.show();
     }

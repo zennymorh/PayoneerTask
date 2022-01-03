@@ -3,7 +3,6 @@ package com.zennymorh.payoneertask.ui.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
-import android.os.Build;
 import android.os.Bundle;
 
 import com.zennymorh.payoneertask.R;

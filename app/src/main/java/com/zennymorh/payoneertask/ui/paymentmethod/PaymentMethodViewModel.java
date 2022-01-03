@@ -1,4 +1,4 @@
-package com.zennymorh.payoneertask.ui;
+package com.zennymorh.payoneertask.ui.paymentmethod;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
